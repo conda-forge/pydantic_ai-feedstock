@@ -67,7 +67,7 @@ outputs:
 
     tests:
       - python:
-        python_version: python ${{ python_min }}
+          python_version: python ${{ python_min }}
           imports:
             - pydantic_ai
           pip_check: true
