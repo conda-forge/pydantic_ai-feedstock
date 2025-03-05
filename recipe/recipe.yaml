@@ -59,6 +59,7 @@ outputs:
         - pydantic-graph
         - griffe
         - eval-type-backport
+        - opentelemetry-api >=1.28.0
         - if: match(python, "<3.10")
           then:
             - typing-extensions
