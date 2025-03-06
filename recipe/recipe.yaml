@@ -35,6 +35,7 @@ outputs:
 
     tests:
       - python:
+          python_version: ${{ python_min }}
           imports:
             - pydantic_graph
           pip_check: true
@@ -59,12 +60,14 @@ outputs:
         - pydantic-graph
         - griffe
         - eval-type-backport
+        - opentelemetry-api >=1.28.0
         - if: match(python, "<3.10")
           then:
             - typing-extensions
 
     tests:
       - python:
+          python_version: ${{ python_min }}
           imports:
             - pydantic_ai
           pip_check: true
