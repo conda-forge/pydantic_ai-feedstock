@@ -1,5 +1,5 @@
 context:
-  version: "0.0.30"
+  version: "0.0.31"
 
 recipe:
   name: pydantic_ai
@@ -7,7 +7,7 @@ recipe:
 
 source:
   - url: https://github.com/pydantic/pydantic-ai/archive/refs/tags/v${{ version }}.tar.gz
-    sha256: c8dabaa7b14185c61f3751e25f0d1804d96723c09ce5f7f62b11281d02f7aca3
+    sha256: 235c65a82c04704965965ccae2dc259b02a1edd1ea95eb20534fb427c12e1562
 
 build:
   number: 0
@@ -35,6 +35,7 @@ outputs:
 
     tests:
       - python:
+          python_version: ${{ python_min }}
           imports:
             - pydantic_graph
           pip_check: true
@@ -59,12 +60,14 @@ outputs:
         - pydantic-graph
         - griffe
         - eval-type-backport
+        - opentelemetry-api >=1.28.0
         - if: match(python, "<3.10")
           then:
             - typing-extensions
 
     tests:
       - python:
+          python_version: ${{ python_min }}
           imports:
             - pydantic_ai
           pip_check: true
