@@ -31,6 +31,7 @@ outputs:
         - python >=${{ python_min }}
         - logfire-api
         - pydantic
+        - typing_inspection
         - httpx
 
     tests:
