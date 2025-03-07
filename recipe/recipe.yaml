@@ -1,5 +1,5 @@
 context:
-  version: "0.0.31"
+  version: "0.0.36"
 
 recipe:
   name: pydantic_ai
@@ -7,7 +7,7 @@ recipe:
 
 source:
   - url: https://github.com/pydantic/pydantic-ai/archive/refs/tags/v${{ version }}.tar.gz
-    sha256: 235c65a82c04704965965ccae2dc259b02a1edd1ea95eb20534fb427c12e1562
+    sha256: 1a27086460217fdc6d2bb64c113b369f617a9dd7b792fe88c4ecc803f3cac066
 
 build:
   number: 0
