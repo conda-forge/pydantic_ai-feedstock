@@ -35,6 +35,13 @@ outputs:
         - typing-inspection
         - httpx
 
+    tests:
+      - python:
+          python_version: ${{ python_min }}
+          imports:
+            - pydantic_graph
+          pip_check: true
+
   - package:
       name: pydantic-ai
       version: ${{ version }}
