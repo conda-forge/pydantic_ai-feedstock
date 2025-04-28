@@ -99,6 +99,7 @@ outputs:
         - pyyaml>=6.0.2
         - anyio
         - eval-type-backport
+        - opentelemetry-sdk
 
     tests:
       - python:
