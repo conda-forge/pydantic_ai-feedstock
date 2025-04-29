@@ -1,5 +1,5 @@
 context:
-  version: "0.0.46"
+  version: "0.0.53"
 
 recipe:
   name: pydantic_ai
@@ -7,7 +7,7 @@ recipe:
 
 source:
   - url: https://github.com/pydantic/pydantic-ai/archive/refs/tags/v${{ version }}.tar.gz
-    sha256: dc1e7edeb48d5dc75507a0c779e3c3fb9480050bd7f8d4a5125add404d3cfaea
+    sha256: ea8e369bd01153a2327d8fd5691a8014edc66f1d7e465e2d0985033ddf027418
 
 build:
   number: 0
@@ -27,6 +27,7 @@ outputs:
         - python ${{ python_min }}.*
         - pip
         - hatchling
+        - uv-dynamic-versioning =0.7.0
       run:
         - python >=${{ python_min }}
         - logfire-api
@@ -36,7 +37,7 @@ outputs:
 
     tests:
       - python:
-          python_version: ${{ python_min }}
+          python_version: ${{ python_min }}.*
           imports:
             - pydantic_graph
           pip_check: true
@@ -55,6 +56,7 @@ outputs:
         - python ${{ python_min }}.*
         - pip
         - hatchling
+        - uv-dynamic-versioning =0.7.0
       run:
         - python >=${{ python_min }}
         - logfire-api
@@ -68,9 +70,42 @@ outputs:
 
     tests:
       - python:
-          python_version: ${{ python_min }}
+          python_version: ${{ python_min }}.*
           imports:
             - pydantic_ai
+          pip_check: true
+
+  - package:
+      name: pydantic-evals
+      version: ${{ version }}
+
+    build:
+      noarch: python
+      script:
+        - ${{ PYTHON }} -m pip install ./pydantic_evals/ -vv
+
+    requirements:
+      host:
+        - python ${{ python_min }}.*
+        - pip
+        - hatchling
+        - uv-dynamic-versioning =0.7.0
+      run:
+        - python >=${{ python_min }}
+        - pydantic-ai
+        - rich >=13.9.4
+        - logfire-api >=1.2.0
+        - pydantic >=2.10
+        - pyyaml >=6.0.2
+        - anyio
+        - eval-type-backport
+        - opentelemetry-sdk
+
+    tests:
+      - python:
+          python_version: ${{ python_min }}.*
+          imports:
+            - pydantic_evals
           pip_check: true
 
 about:

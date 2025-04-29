@@ -30,6 +30,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-pydantic--ai-green.svg)](https://anaconda.org/conda-forge/pydantic-ai) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pydantic-ai.svg)](https://anaconda.org/conda-forge/pydantic-ai) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pydantic-ai.svg)](https://anaconda.org/conda-forge/pydantic-ai) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pydantic-ai.svg)](https://anaconda.org/conda-forge/pydantic-ai) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pydantic--evals-green.svg)](https://anaconda.org/conda-forge/pydantic-evals) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pydantic-evals.svg)](https://anaconda.org/conda-forge/pydantic-evals) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pydantic-evals.svg)](https://anaconda.org/conda-forge/pydantic-evals) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pydantic-evals.svg)](https://anaconda.org/conda-forge/pydantic-evals) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-pydantic--graph-green.svg)](https://anaconda.org/conda-forge/pydantic-graph) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pydantic-graph.svg)](https://anaconda.org/conda-forge/pydantic-graph) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pydantic-graph.svg)](https://anaconda.org/conda-forge/pydantic-graph) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pydantic-graph.svg)](https://anaconda.org/conda-forge/pydantic-graph) |
 
 Installing pydantic-ai
@@ -42,16 +43,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `pydantic-ai, pydantic-graph` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `pydantic-ai, pydantic-evals, pydantic-graph` can be installed with `conda`:
 
 ```
-conda install pydantic-ai pydantic-graph
+conda install pydantic-ai pydantic-evals pydantic-graph
 ```
 
 or with `mamba`:
 
 ```
-mamba install pydantic-ai pydantic-graph
+mamba install pydantic-ai pydantic-evals pydantic-graph
 ```
 
 It is possible to list all of the versions of `pydantic-ai` available on your platform with `conda`:
