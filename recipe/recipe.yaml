@@ -32,6 +32,7 @@ outputs:
         - python >=${{ python_min }}
         - logfire-api
         - pydantic
+        - opentelemetry-api >=1.28.0
         - typing-inspection
         - httpx
 
