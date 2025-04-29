@@ -27,7 +27,7 @@ outputs:
         - python ${{ python_min }}.*
         - pip
         - hatchling
-        - uv-dynamic-versioning >=0.7.0
+        - uv-dynamic-versioning =0.7.0
       run:
         - python >=${{ python_min }}
         - logfire-api
@@ -37,7 +37,7 @@ outputs:
 
     tests:
       - python:
-          python_version: ${{ python_min }}
+          python_version: ${{ python_min }}.*
           imports:
             - pydantic_graph
           pip_check: true
@@ -56,7 +56,7 @@ outputs:
         - python ${{ python_min }}.*
         - pip
         - hatchling
-        - uv-dynamic-versioning >=0.7.0
+        - uv-dynamic-versioning =0.7.0
       run:
         - python >=${{ python_min }}
         - logfire-api
@@ -70,7 +70,7 @@ outputs:
 
     tests:
       - python:
-          python_version: ${{ python_min }}
+          python_version: ${{ python_min }}.*
           imports:
             - pydantic_ai
           pip_check: true
@@ -89,7 +89,7 @@ outputs:
         - python ${{ python_min }}.*
         - pip
         - hatchling
-        - uv-dynamic-versioning >=0.7.0
+        - uv-dynamic-versioning =0.7.0
       run:
         - python >=${{ python_min }}
         - pydantic-ai
@@ -103,7 +103,7 @@ outputs:
 
     tests:
       - python:
-          python_version: ${{ python_min }}
+          python_version: ${{ python_min }}.*
           imports:
             - pydantic_evals
           pip_check: true
