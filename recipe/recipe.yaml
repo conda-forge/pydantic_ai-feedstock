@@ -61,7 +61,7 @@ outputs:
       run:
         - python >=${{ python_min }}
         - logfire-api
-        - pydantic-graph
+        - pydantic-graph =${{ version }}
         - griffe
         - eval-type-backport
         - opentelemetry-api >=1.28.0
@@ -93,7 +93,7 @@ outputs:
         - uv-dynamic-versioning =0.7.0
       run:
         - python >=${{ python_min }}
-        - pydantic-ai
+        - pydantic-ai =${{ version }}
         - rich >=13.9.4
         - logfire-api >=1.2.0
         - pydantic >=2.10
