@@ -1,5 +1,5 @@
 context:
-  version: "0.0.53"
+  version: "0.1.8"
 
 recipe:
   name: pydantic_ai
@@ -7,7 +7,7 @@ recipe:
 
 source:
   - url: https://github.com/pydantic/pydantic-ai/archive/refs/tags/v${{ version }}.tar.gz
-    sha256: ea8e369bd01153a2327d8fd5691a8014edc66f1d7e465e2d0985033ddf027418
+    sha256: 5e7b97e557661c48f97f980b1a23594a80c13cb8fecdf0b679bb5e5cb2b65c2d
 
 build:
   number: 0
@@ -32,6 +32,7 @@ outputs:
         - python >=${{ python_min }}
         - logfire-api
         - pydantic
+        - opentelemetry-api >=1.28.0
         - typing-inspection
         - httpx
 
