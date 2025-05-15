@@ -30,17 +30,44 @@ outputs:
         - uv-dynamic-versioning =0.7.0
       run:
         - python >=${{ python_min }}
-        - logfire-api
-        - pydantic
-        - opentelemetry-api >=1.28.0
-        - typing-inspection
-        - httpx
+        - httpx >=0.27
+        - logfire-api >=1.2.0
+        - pydantic >=2.10
+        - typing-inspection >=0.4.0
 
     tests:
       - python:
           python_version: ${{ python_min }}.*
           imports:
             - pydantic_graph
+          pip_check: true
+
+  - package:
+      name: fasta2a
+      version: ${{ version }}
+
+    build:
+      noarch: python
+      script:
+        - ${{ PYTHON }} -m pip install ./fasta2a/ -vv
+
+    requirements:
+      host:
+        - python ${{ python_min }}.*
+        - pip
+        - hatchling
+        - uv-dynamic-versioning =0.7.0
+      run:
+        - python >=${{ python_min }}
+        - starlette >0.29.0
+        - pydantic >=2.10
+        - opentelemetry-api >=1.28.0
+
+    tests:
+      - python:
+          python_version: ${{ python_min }}.*
+          imports:
+            - fasta2a
           pip_check: true
 
   - package:
@@ -60,14 +87,17 @@ outputs:
         - uv-dynamic-versioning =0.7.0
       run:
         - python >=${{ python_min }}
-        - logfire-api
+        - eval-type-backport >=0.2.0
+        - griffe >=1.3.2
+        - httpx >=0.27
+        - fasta2a ==${{ version }}
+        - pydantic >=2.10
         - pydantic-graph =${{ version }}
-        - griffe
-        - eval-type-backport
         - opentelemetry-api >=1.28.0
-        - if: match(python, "<3.10")
+        - typing-inspection >=0.4.0
+        - if: match(python, "<3.11")
           then:
-            - typing-extensions
+            - exceptiongroup
 
     tests:
       - python:
@@ -99,8 +129,10 @@ outputs:
         - pydantic >=2.10
         - pyyaml >=6.0.2
         - anyio
-        - eval-type-backport
         - opentelemetry-sdk
+        - if: match(python, "<3.11")
+          then:
+            - eval-type-backport
 
     tests:
       - python:
