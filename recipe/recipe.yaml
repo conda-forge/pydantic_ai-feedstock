@@ -148,5 +148,6 @@ about:
   license_file: LICENSE
 
 extra:
+  feedstock-name: pydantic_ai
   recipe-maintainers:
     - moritzwilksch
