@@ -14,6 +14,34 @@ build:
 
 outputs:
   - package:
+      name: fasta2a
+      version: ${{ version }}
+
+    build:
+      noarch: python
+      script:
+        - ${{ PYTHON }} -m pip install ./fasta2a/ -vv
+
+    requirements:
+      host:
+        - python ${{ python_min }}.*
+        - pip
+        - hatchling
+        - uv-dynamic-versioning =0.7.0
+      run:
+        - python >=${{ python_min }}
+        - starlette >0.29.0
+        - pydantic >=2.10
+        - opentelemetry-api >=1.28.0
+
+    tests:
+      - python:
+          python_version: ${{ python_min }}.*
+          imports:
+            - fasta2a
+          pip_check: true
+
+  - package:
       name: pydantic-graph
       version: ${{ version }}
 
@@ -40,34 +68,6 @@ outputs:
           python_version: ${{ python_min }}.*
           imports:
             - pydantic_graph
-          pip_check: true
-
-  - package:
-      name: fasta2a
-      version: ${{ version }}
-
-    build:
-      noarch: python
-      script:
-        - ${{ PYTHON }} -m pip install ./fasta2a/ -vv
-
-    requirements:
-      host:
-        - python ${{ python_min }}.*
-        - pip
-        - hatchling
-        - uv-dynamic-versioning =0.7.0
-      run:
-        - python >=${{ python_min }}
-        - starlette >0.29.0
-        - pydantic >=2.10
-        - opentelemetry-api >=1.28.0
-
-    tests:
-      - python:
-          python_version: ${{ python_min }}.*
-          imports:
-            - fasta2a
           pip_check: true
 
   - package:
