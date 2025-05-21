@@ -1,5 +1,5 @@
 context:
-  version: "0.2.4"
+  version: "0.2.6"
 
 recipe:
   name: pydantic_ai
@@ -16,7 +16,7 @@ outputs:
 
     source:
       - url: https://pypi.org/packages/source/f/fasta2a/fasta2a-${{ version }}.tar.gz
-        sha256: 7afa3fd3205ce3f299b68b2705d285380328a7a4cbd2d230230e66b4701743e8
+        sha256: 9092146b0f701166f50f42beb071cfc6781ea0272969cb90b5908ffaeba2c45a
 
     build:
       noarch: python
@@ -49,7 +49,7 @@ outputs:
 
     source:
       - url: https://pypi.org/packages/source/p/pydantic-graph/pydantic_graph-${{ version }}.tar.gz
-        sha256: e01cec584b7d53186ff58e0c673d8d55244b87783932028e4b0f49a5800a1e8c
+        sha256: 4338fbc95642e346fe624431f7de18811b959b16a63e306f82794bcb69bcb668
 
     build:
       noarch: python
@@ -66,7 +66,6 @@ outputs:
         - python >=${{ python_min }}
         - httpx >=0.27
         - logfire-api >=1.2.0
-        - opentelemetry-api >=1.28.0
         - pydantic >=2.10
         - typing-inspection >=0.4.0
 
@@ -83,7 +82,7 @@ outputs:
 
     source:
       - url: https://pypi.org/packages/source/p/pydantic-ai-slim/pydantic_ai_slim-${{ version }}.tar.gz
-        sha256: 498ab56e6b00ce2cc28c7c6da536c78a7665ef1345330bfe025e8376529bd296
+        sha256: bf3df09262fb056a8f271617663e2627e7f03d2fd36133aaba55724e2d84654f
 
     build:
       noarch: python
@@ -120,7 +119,7 @@ outputs:
 
     source:
       - url: https://pypi.org/packages/source/p/pydantic-ai/pydantic_ai-${{ version }}.tar.gz
-        sha256: f80820f4b84d35c9155cf5bd79881576eca141f7b7a232ed840811a4307ee0ea
+        sha256: 9631957188effab6e3cc96dc80a016ff926d019c356a2ed896fb8fc4c44f2654
 
     build:
       noarch: python
@@ -159,7 +158,7 @@ outputs:
 
     source:
       - url: https://pypi.org/packages/source/p/pydantic-evals/pydantic_evals-${{ version }}.tar.gz
-        sha256: a5b21e6235975a4b3d40d33c7a76234d6435de07bd6709a2296452933f8ba111
+        sha256: b1199adcf1faad5103e9a96bfae6bbcd800c6bc80f2a1c67533db76cc6cd1633
 
     build:
       noarch: python
@@ -195,7 +194,7 @@ about:
   summary: Agent Framework / shim to use Pydantic with LLMs
   documentation: https://ai.pydantic.dev
   license: MIT
-  license_url: https://raw.githubusercontent.com/pydantic/pydantic-ai/refs/tags/v${{ version }}/LICENSE
+  license_file: LICENSE
 
 extra:
   feedstock-name: pydantic-ai
