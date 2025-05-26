@@ -1,5 +1,5 @@
 context:
-  version: "0.2.7"
+  version: "0.2.8"
 
 recipe:
   name: pydantic_ai
@@ -16,7 +16,7 @@ outputs:
 
     source:
       - url: https://pypi.org/packages/source/f/fasta2a/fasta2a-${{ version }}.tar.gz
-        sha256: 9092146b0f701166f50f42beb071cfc6781ea0272969cb90b5908ffaeba2c45a
+        sha256: d6cc0704142fa3e9e520128e6008957d36c4d5d6931713708f10fae6d6352dcf
 
     build:
       noarch: python
@@ -49,7 +49,7 @@ outputs:
 
     source:
       - url: https://pypi.org/packages/source/p/pydantic-graph/pydantic_graph-${{ version }}.tar.gz
-        sha256: 4338fbc95642e346fe624431f7de18811b959b16a63e306f82794bcb69bcb668
+        sha256: 6e8eef9e4690a76b95f1321c75f4c596781a19f1b3cfb78391cf6af8955d542f
 
     build:
       noarch: python
@@ -82,7 +82,7 @@ outputs:
 
     source:
       - url: https://pypi.org/packages/source/p/pydantic-ai-slim/pydantic_ai_slim-${{ version }}.tar.gz
-        sha256: bf3df09262fb056a8f271617663e2627e7f03d2fd36133aaba55724e2d84654f
+        sha256: ba4c26188ff434d9111b1287bed01506488b7a4ca822f5c934d7895e04573f0b
 
     build:
       noarch: python
@@ -119,7 +119,7 @@ outputs:
 
     source:
       - url: https://pypi.org/packages/source/p/pydantic-ai/pydantic_ai-${{ version }}.tar.gz
-        sha256: 9631957188effab6e3cc96dc80a016ff926d019c356a2ed896fb8fc4c44f2654
+        sha256: 56c692efa8d63cb032f602d2b5391f86b3acdf34f2a69e3edc0d32d37b42fe91
 
     build:
       noarch: python
@@ -158,7 +158,7 @@ outputs:
 
     source:
       - url: https://pypi.org/packages/source/p/pydantic-evals/pydantic_evals-${{ version }}.tar.gz
-        sha256: b1199adcf1faad5103e9a96bfae6bbcd800c6bc80f2a1c67533db76cc6cd1633
+        sha256: bdfdcaf2af5c5b539e14e88984063b5c26aa351399801b4e249455cb85db7f3f
 
     build:
       noarch: python
