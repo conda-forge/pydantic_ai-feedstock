@@ -1,5 +1,5 @@
 context:
-  version: "0.2.8"
+  version: "0.2.14"
 
 recipe:
   name: pydantic_ai
@@ -16,7 +16,7 @@ outputs:
 
     source:
       - url: https://pypi.org/packages/source/f/fasta2a/fasta2a-${{ version }}.tar.gz
-        sha256: d6cc0704142fa3e9e520128e6008957d36c4d5d6931713708f10fae6d6352dcf
+        sha256: 24cc34fdc9d2ea1a9d7aadc1864a47704d2576078113eaafad6344297ee13e02
 
     build:
       noarch: python
@@ -34,7 +34,6 @@ outputs:
         - starlette >0.29.0
         - pydantic >=2.10
         - opentelemetry-api >=1.28.0
-        - eval-type-backport >=0.2.0
 
     tests:
       - python:
@@ -49,7 +48,7 @@ outputs:
 
     source:
       - url: https://pypi.org/packages/source/p/pydantic-graph/pydantic_graph-${{ version }}.tar.gz
-        sha256: 6e8eef9e4690a76b95f1321c75f4c596781a19f1b3cfb78391cf6af8955d542f
+        sha256: 3346bacfe368ce18ddab7a70f7d138b781b7b459101c1e330d97c93d489334b6
 
     build:
       noarch: python
@@ -82,7 +81,7 @@ outputs:
 
     source:
       - url: https://pypi.org/packages/source/p/pydantic-ai-slim/pydantic_ai_slim-${{ version }}.tar.gz
-        sha256: ba4c26188ff434d9111b1287bed01506488b7a4ca822f5c934d7895e04573f0b
+        sha256: 2e3ebfded404b1c223e30e69517c9bf669344fff0cf2787d67ba086862a22b9a
 
     build:
       noarch: python
@@ -119,7 +118,7 @@ outputs:
 
     source:
       - url: https://pypi.org/packages/source/p/pydantic-ai/pydantic_ai-${{ version }}.tar.gz
-        sha256: 56c692efa8d63cb032f602d2b5391f86b3acdf34f2a69e3edc0d32d37b42fe91
+        sha256: 295e03fd243e431ebcede45878b59d227aa020287f3180ebbcc2957b969de6ac
 
     build:
       noarch: python
@@ -158,7 +157,7 @@ outputs:
 
     source:
       - url: https://pypi.org/packages/source/p/pydantic-evals/pydantic_evals-${{ version }}.tar.gz
-        sha256: bdfdcaf2af5c5b539e14e88984063b5c26aa351399801b4e249455cb85db7f3f
+        sha256: e69cc41f78b613afba06c9156cd53593f05b04a12dd0cabe79caf8d3547d169c
 
     build:
       noarch: python
@@ -176,7 +175,6 @@ outputs:
         - anyio
         - eval-type-backport >=0.2.0
         - logfire-api >=1.2.0
-        - opentelemetry-sdk
         - pydantic >=2.10
         - pydantic-ai-slim =${{ version }}
         - pyyaml >=6.0.2
