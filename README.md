@@ -31,6 +31,7 @@ Current release info
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-fasta2a-green.svg)](https://anaconda.org/conda-forge/fasta2a) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/fasta2a.svg)](https://anaconda.org/conda-forge/fasta2a) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/fasta2a.svg)](https://anaconda.org/conda-forge/fasta2a) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/fasta2a.svg)](https://anaconda.org/conda-forge/fasta2a) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-pydantic--ai-green.svg)](https://anaconda.org/conda-forge/pydantic-ai) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pydantic-ai.svg)](https://anaconda.org/conda-forge/pydantic-ai) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pydantic-ai.svg)](https://anaconda.org/conda-forge/pydantic-ai) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pydantic-ai.svg)](https://anaconda.org/conda-forge/pydantic-ai) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pydantic--ai--slim-green.svg)](https://anaconda.org/conda-forge/pydantic-ai-slim) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pydantic-ai-slim.svg)](https://anaconda.org/conda-forge/pydantic-ai-slim) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pydantic-ai-slim.svg)](https://anaconda.org/conda-forge/pydantic-ai-slim) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pydantic-ai-slim.svg)](https://anaconda.org/conda-forge/pydantic-ai-slim) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-pydantic--evals-green.svg)](https://anaconda.org/conda-forge/pydantic-evals) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pydantic-evals.svg)](https://anaconda.org/conda-forge/pydantic-evals) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pydantic-evals.svg)](https://anaconda.org/conda-forge/pydantic-evals) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pydantic-evals.svg)](https://anaconda.org/conda-forge/pydantic-evals) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-pydantic--graph-green.svg)](https://anaconda.org/conda-forge/pydantic-graph) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pydantic-graph.svg)](https://anaconda.org/conda-forge/pydantic-graph) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pydantic-graph.svg)](https://anaconda.org/conda-forge/pydantic-graph) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pydantic-graph.svg)](https://anaconda.org/conda-forge/pydantic-graph) |
 
@@ -44,16 +45,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `fasta2a, pydantic-ai, pydantic-evals, pydantic-graph` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `fasta2a, pydantic-ai, pydantic-ai-slim, pydantic-evals, pydantic-graph` can be installed with `conda`:
 
 ```
-conda install fasta2a pydantic-ai pydantic-evals pydantic-graph
+conda install fasta2a pydantic-ai pydantic-ai-slim pydantic-evals pydantic-graph
 ```
 
 or with `mamba`:
 
 ```
-mamba install fasta2a pydantic-ai pydantic-evals pydantic-graph
+mamba install fasta2a pydantic-ai pydantic-ai-slim pydantic-evals pydantic-graph
 ```
 
 It is possible to list all of the versions of `fasta2a` available on your platform with `conda`:
