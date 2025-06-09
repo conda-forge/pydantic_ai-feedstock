@@ -1,12 +1,12 @@
 context:
-  version: "0.2.14"
+  version: "0.2.16"
 
 recipe:
   name: pydantic_ai
   version: ${{ version }}
 
 build:
-  number: 1
+  number: 0
 
 outputs:
 
