@@ -6,6 +6,18 @@
 #     "pyyaml",
 # ]
 # ///
+"""Update the version and SHA256 hashes in the pydantic_ai-feedstock recipe.
+
+Example
+-------
+
+To update the recipe to version 0.3.4, run:
+
+.. code-block:: console
+
+    uv run update_version.py 0.3.4
+
+"""
 
 import argparse
 from dataclasses import dataclass
