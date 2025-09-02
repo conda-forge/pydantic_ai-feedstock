@@ -9,40 +9,6 @@ build:
   number: 1
 
 outputs:
-
-  - package:
-      name: fasta2a
-      version: ${{ version }}
-
-    source:
-      - url: https://pypi.org/packages/source/f/fasta2a/fasta2a-${{ version }}.tar.gz
-        sha256: 1f749b5ea7a9e402c4684e07a2fb9e004d1ed14de4c3ea56c9dbc7a4691f4af0
-
-    build:
-      noarch: python
-      script:
-        - ${{ PYTHON }} -m pip install . -vv
-
-    requirements:
-      host:
-        - python ${{ python_min }}.*
-        - pip
-        - hatchling
-        - uv-dynamic-versioning
-      run:
-        - python >=${{ python_min }}
-        - starlette >0.29.0
-        - pydantic >=2.10
-        - opentelemetry-api >=1.28.0
-        - eval-type-backport >=0.2.0
-
-    tests:
-      - python:
-          python_version: ${{ python_min }}.*
-          imports:
-            - fasta2a
-          pip_check: true
-
   - package:
       name: pydantic-graph
       version: ${{ version }}
