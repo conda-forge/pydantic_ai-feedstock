@@ -1,5 +1,6 @@
 context:
   version: "0.8.1"
+  python_min: 3.10
 
 recipe:
   name: pydantic_ai
@@ -80,6 +81,7 @@ outputs:
         - pydantic-graph =${{ version }}
         - opentelemetry-api >=1.28.0
         - typing-inspection >=0.4.0
+        - genai-prices >=0.0.22
 
     tests:
       - python:
