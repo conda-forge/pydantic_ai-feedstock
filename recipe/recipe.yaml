@@ -6,9 +6,6 @@ recipe:
   name: pydantic_ai
   version: ${{ version }}
 
-build:
-  number: 1
-
 source:
   - url: https://pypi.org/packages/source/p/pydantic-ai/pydantic_ai-${{ version }}.tar.gz
     sha256: 05974382082ee4f3706909d06bdfcc5e95f39e29230cc4d00e47429080099844
@@ -22,6 +19,9 @@ source:
   - url: https://pypi.org/packages/source/p/pydantic-evals/pydantic_evals-${{ version }}.tar.gz
     sha256: c398a623c31c19ce70e346ad75654fcb1517c3f6a821461f64fe5cbbe0813023
     target_directory: pydantic-evals/
+
+build:
+  number: 1
 
 outputs:
   - package:
