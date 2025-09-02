@@ -129,7 +129,7 @@ outputs:
           pip_check: true
 
     about:
-      license_file: ./pydantic-ai/LICENSE
+      license_file: pydantic-ai/LICENSE
 
   - package:
       name: pydantic-evals
