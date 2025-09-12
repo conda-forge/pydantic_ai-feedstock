@@ -1,5 +1,5 @@
 context:
-  version: "1.0.3"
+  version: "1.0.5"
   python_min: 3.10
 
 recipe:
@@ -8,16 +8,16 @@ recipe:
 
 source:
   - url: https://pypi.org/packages/source/p/pydantic-ai/pydantic_ai-${{ version }}.tar.gz
-    sha256: 4d7e9b9c9559f713dc5ccecf9ff60262ae229ffa37c354f55302ee9803513bec
+    sha256: f5bf7d3c2bebecfe5b538fdc81fbf783815b36bb8a2e5f72e7633189d50e038d
     target_directory: pydantic-ai/
   - url: https://pypi.org/packages/source/p/pydantic-ai-slim/pydantic_ai_slim-${{ version }}.tar.gz
-    sha256: 5e2d7cf3d880b8847efa53539cd7e1e4f17a5b019c810d2515b80cfb19421245
+    sha256: 5f8bf37e4f1744ee5aff91dbcbdc68f3a13142fb53d460195139b0e221e8563e
     target_directory: pydantic-ai-slim/
   - url: https://pypi.org/packages/source/p/pydantic-graph/pydantic_graph-${{ version }}.tar.gz
-    sha256: b3d3806dc6ec0d487df27deec4afbbab5ddb4f3dba3b80972206fc6dfe656cfb
+    sha256: cb84af6778aef0a35c1eeca3231f619bc2d53dc4c6d4ec4cfd249f940e710ec7
     target_directory: pydantic-graph/
   - url: https://pypi.org/packages/source/p/pydantic-evals/pydantic_evals-${{ version }}.tar.gz
-    sha256: df34806a79a2cff5f770538eaaad05811827226de44733673d5b7151b2433549
+    sha256: 733ae79baf08894b593a2bce840c27ba57e8f5b5c8fd03e46588e164dae1f3c4
     target_directory: pydantic-evals/
 
 build:
