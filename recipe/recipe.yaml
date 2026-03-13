@@ -1,6 +1,6 @@
 context:
   version: "1.68.0"
-  python_min: 3.10
+  python_min: "3.10"
 
 recipe:
   name: pydantic_ai
