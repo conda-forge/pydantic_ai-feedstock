@@ -1,5 +1,5 @@
 context:
-  version: "1.106.0"
+  version: "1.107.0"
   python_min: "3.10"
 
 recipe:
@@ -8,16 +8,16 @@ recipe:
 
 source:
   - url: https://pypi.org/packages/source/p/pydantic-ai/pydantic_ai-${{ version }}.tar.gz
-    sha256: fb2b4bba143f924f2272926428ed173e456b00e0e5b3b125d7fd757f11b21fee
+    sha256: 254496d18451b2750a4dddc2591c6c42f25dd223d02ca4252812ab06e75f1044
     target_directory: pydantic-ai/
   - url: https://pypi.org/packages/source/p/pydantic-ai-slim/pydantic_ai_slim-${{ version }}.tar.gz
-    sha256: e265598c8ee0e903ebb02d0494bb232be4cc8aa463ba1a55aa743cf34135dacf
+    sha256: 4616f689a92fcfecfecf2a7af27aca22f139a873cf6d7a8929eaeee9c0eedbb4
     target_directory: pydantic-ai-slim/
   - url: https://pypi.org/packages/source/p/pydantic-graph/pydantic_graph-${{ version }}.tar.gz
-    sha256: 55afa33df4f699ed5c1185f81b6a06e2161958f1aa0c20742b2dae5745e84cce
+    sha256: 278dd89b3e33f3a2963ac949f27a53aef705c5d883a8ce5d06d23e6e3cfbd972
     target_directory: pydantic-graph/
   - url: https://pypi.org/packages/source/p/pydantic-evals/pydantic_evals-${{ version }}.tar.gz
-    sha256: ec870c2e93e2a34aea83468a7d7c21cba3e9dacf62f145eef2229d9fd71b2cac
+    sha256: 153378eda4847d48ca5e6b995e6221e5f0e4f4641771a1eed244fa2065923b27
     target_directory: pydantic-evals/
 
 build:
@@ -80,7 +80,7 @@ outputs:
         - exceptiongroup >=1.2.2
         - opentelemetry-api >=1.28.0
         - typing-inspection >=0.4.0
-        - genai-prices >=0.0.48
+        - genai-prices >=0.0.62
 
     tests:
       - python:
@@ -110,17 +110,6 @@ outputs:
       run:
         - python >=${{ python_min }}
         - pydantic-ai-slim =${{ version }}
-        - logfire >=4.16.0
-        - openai >=2.29.0
-        - tiktoken >=0.12.0
-        - google-genai >=1.70.0
-        - google-auth >=2.36.0
-        - requests >=2.32.2
-        - anthropic >=0.97.0
-        - groq >=0.25.0
-        - boto3 >=1.42.63
-        - pydantic-evals =${{ version }}
-        - fasta2a >=0.4.1
 
     tests:
       - python:
