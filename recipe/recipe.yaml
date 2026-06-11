@@ -80,7 +80,7 @@ outputs:
         - exceptiongroup >=1.2.2
         - opentelemetry-api >=1.28.0
         - typing-inspection >=0.4.0
-        - genai-prices >=0.0.48
+        - genai-prices >=0.0.62
 
     tests:
       - python:
@@ -110,17 +110,6 @@ outputs:
       run:
         - python >=${{ python_min }}
         - pydantic-ai-slim =${{ version }}
-        - logfire >=4.16.0
-        - openai >=2.29.0
-        - tiktoken >=0.12.0
-        - google-genai >=1.70.0
-        - google-auth >=2.36.0
-        - requests >=2.32.2
-        - anthropic >=0.97.0
-        - groq >=0.25.0
-        - boto3 >=1.42.63
-        - pydantic-evals =${{ version }}
-        - fasta2a >=0.4.1
 
     tests:
       - python:
