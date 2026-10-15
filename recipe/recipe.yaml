@@ -1,5 +1,7 @@
 context:
   version: "2.56.0"
+  # pydantic-ai-harness is versioned 0.<minor>.<patch> of pydantic-ai
+  harness_version: 0.${{ (version | split("."))[1] }}.${{ (version | split("."))[2] }}
 
 recipe:
   name: pydantic_ai
@@ -18,9 +20,12 @@ source:
   - url: https://pypi.org/packages/source/p/pydantic-evals/pydantic_evals-${{ version }}.tar.gz
     sha256: fdcd90326eccaffb539cb991381ea79152f792e6f6226416ee73d7fec92da18b
     target_directory: pydantic-evals/
+  - url: https://pypi.org/packages/source/p/pydantic-ai-harness/pydantic_ai_harness-${{ harness_version }}.tar.gz
+    sha256: 19beb2573ebbb4b3ac8ffe7e679227039ee67498559aa43a3e2309268afd6817
+    target_directory: pydantic-ai-harness/
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - package:
@@ -162,6 +167,42 @@ outputs:
 
     about:
       license_file: pydantic-evals/LICENSE
+
+  - package:
+      name: pydantic-ai-harness
+      version: ${{ harness_version }}
+
+    build:
+      noarch: python
+      script:
+        - ${{ PYTHON }} -m pip install ./pydantic-ai-harness -vv
+
+    requirements:
+      host:
+        - python ${{ python_min }}.*
+        - pip
+        - hatchling
+        - uv-dynamic-versioning >=0.7.0
+      run:
+        - python >=${{ python_min }}
+        - genai-prices >=0.0.71
+        - httpx >=0.28.1
+        - json-repair >=0.58.0
+        - pydantic-ai-slim =${{ version }}
+
+    tests:
+      - python:
+          python_version:
+            - ${{ python_min }}.*
+            - "*"
+          imports:
+            - pydantic_ai_harness
+          pip_check: true
+
+    about:
+      summary: The official capability library and harness for Pydantic AI
+      homepage: https://pydantic.dev/docs/ai/harness/
+      license_file: pydantic-ai-harness/LICENSE
 
 about:
   homepage: https://ai.pydantic.dev/

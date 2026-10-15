@@ -15,6 +15,17 @@ Summary: Agent Framework / shim to use Pydantic with LLMs
 
 Documentation: https://ai.pydantic.dev/
 
+About pydantic-ai-harness
+-------------------------
+
+Home: https://pydantic.dev/docs/ai/harness/
+
+Package license: MIT
+
+Summary: The official capability library and harness for Pydantic AI
+
+Documentation: https://ai.pydantic.dev/
+
 About pydantic-ai-slim
 ----------------------
 
@@ -68,6 +79,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-pydantic--ai-green.svg)](https://anaconda.org/conda-forge/pydantic-ai) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pydantic-ai.svg)](https://anaconda.org/conda-forge/pydantic-ai) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pydantic-ai.svg)](https://anaconda.org/conda-forge/pydantic-ai) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pydantic-ai.svg)](https://anaconda.org/conda-forge/pydantic-ai) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pydantic--ai--harness-green.svg)](https://anaconda.org/conda-forge/pydantic-ai-harness) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pydantic-ai-harness.svg)](https://anaconda.org/conda-forge/pydantic-ai-harness) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pydantic-ai-harness.svg)](https://anaconda.org/conda-forge/pydantic-ai-harness) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pydantic-ai-harness.svg)](https://anaconda.org/conda-forge/pydantic-ai-harness) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-pydantic--ai--slim-green.svg)](https://anaconda.org/conda-forge/pydantic-ai-slim) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pydantic-ai-slim.svg)](https://anaconda.org/conda-forge/pydantic-ai-slim) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pydantic-ai-slim.svg)](https://anaconda.org/conda-forge/pydantic-ai-slim) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pydantic-ai-slim.svg)](https://anaconda.org/conda-forge/pydantic-ai-slim) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-pydantic--evals-green.svg)](https://anaconda.org/conda-forge/pydantic-evals) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pydantic-evals.svg)](https://anaconda.org/conda-forge/pydantic-evals) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pydantic-evals.svg)](https://anaconda.org/conda-forge/pydantic-evals) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pydantic-evals.svg)](https://anaconda.org/conda-forge/pydantic-evals) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-pydantic--graph-green.svg)](https://anaconda.org/conda-forge/pydantic-graph) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pydantic-graph.svg)](https://anaconda.org/conda-forge/pydantic-graph) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pydantic-graph.svg)](https://anaconda.org/conda-forge/pydantic-graph) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pydantic-graph.svg)](https://anaconda.org/conda-forge/pydantic-graph) |
@@ -89,7 +101,7 @@ How to use
 <summary>With conda</summary>
 
 ```
-conda install pydantic-ai pydantic-ai-slim pydantic-evals pydantic-graph
+conda install pydantic-ai pydantic-ai-harness pydantic-ai-slim pydantic-evals pydantic-graph
 ```
 
 </details>
@@ -98,7 +110,7 @@ conda install pydantic-ai pydantic-ai-slim pydantic-evals pydantic-graph
 <summary>With mamba</summary>
 
 ```
-mamba install pydantic-ai pydantic-ai-slim pydantic-evals pydantic-graph
+mamba install pydantic-ai pydantic-ai-harness pydantic-ai-slim pydantic-evals pydantic-graph
 ```
 
 </details>
@@ -108,9 +120,9 @@ mamba install pydantic-ai pydantic-ai-slim pydantic-evals pydantic-graph
 
 ```
 # for adding to your local project
-pixi add pydantic-ai pydantic-ai-slim pydantic-evals pydantic-graph
+pixi add pydantic-ai pydantic-ai-harness pydantic-ai-slim pydantic-evals pydantic-graph
 # for installing globally
-pixi global install pydantic-ai pydantic-ai-slim pydantic-evals pydantic-graph
+pixi global install pydantic-ai pydantic-ai-harness pydantic-ai-slim pydantic-evals pydantic-graph
 ```
 
 </details>
