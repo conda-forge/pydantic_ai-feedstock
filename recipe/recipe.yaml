@@ -1,5 +1,5 @@
 context:
-  version: "2.58.0"
+  version: "2.59.0"
   # pydantic-ai-harness is versioned 0.<minor>.<patch> of pydantic-ai
   harness_version: 0.${{ (version | split("."))[1] }}.${{ (version | split("."))[2] }}
 
@@ -9,19 +9,19 @@ recipe:
 
 source:
   - url: https://pypi.org/packages/source/p/pydantic-ai/pydantic_ai-${{ version }}.tar.gz
-    sha256: b473fb772b2f88c587bb53b437573e946464de760f5ec9e65c7cef413d9b5147
+    sha256: 2c6086a49fe97a200063a678cd0464f8bd6eae1e89256970a1ec02315f9fd8ae
     target_directory: pydantic-ai/
   - url: https://pypi.org/packages/source/p/pydantic-ai-slim/pydantic_ai_slim-${{ version }}.tar.gz
-    sha256: 271a7045c22721e73f7d965fcf5d2046a1ae5f840b2392c7d29cf00735f1dba4
+    sha256: ce441e646dd79a8dd80ef19c9f6821d803857f08870b260b61db5e8e7af95010
     target_directory: pydantic-ai-slim/
   - url: https://pypi.org/packages/source/p/pydantic-graph/pydantic_graph-${{ version }}.tar.gz
-    sha256: 3f53e99f15fa9b0d425c6091b6f2aba133cc303c735cc297449737aa83a2b992
+    sha256: f8cf18e18cdea6c6ee412017373c156e4fadc0b4b205c174d564d878d1765989
     target_directory: pydantic-graph/
   - url: https://pypi.org/packages/source/p/pydantic-evals/pydantic_evals-${{ version }}.tar.gz
-    sha256: 68ff3789244d34f3452f1591dc01ecb42d23658810609097c98b9e5ab65a2dd3
+    sha256: 0d14d621ec2c85939601414e3541aaed8fcb2adc7cc6e8feeda21beb9025c291
     target_directory: pydantic-evals/
   - url: https://pypi.org/packages/source/p/pydantic-ai-harness/pydantic_ai_harness-${{ harness_version }}.tar.gz
-    sha256: c02c19a08aa559308a9a91d472fc9035ecac7c88f74e96ddf59032065cb3c441
+    sha256: 1036b93109b8e617909612e7877016332124a57fb609c1787b2d7bb5b96bff84
     target_directory: pydantic-ai-harness/
 
 build:
